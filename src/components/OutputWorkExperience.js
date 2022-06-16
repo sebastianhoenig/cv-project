@@ -7,8 +7,8 @@ function OutputWorkExperience() {
   const [cv, setCv] = useContext(CvContext);
   return (
     <div>
-      {cv.workExperience.map((element, idx) => {
-        return <OutputWorkExperienceItem content={element} key={idx}/>
+      {cv.workExperience.map((element) => {
+        return <OutputWorkExperienceItem content={element}/>
       })}
     </div>
   )
