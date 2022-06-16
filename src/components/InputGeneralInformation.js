@@ -1,10 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import FullName from './InputGeneralInformationComponents/FullName';
 import Email from './InputGeneralInformationComponents/Email';
 import DateOfBirth from './InputGeneralInformationComponents/DateOfBirth';
 import Location from './InputGeneralInformationComponents/Location';
 import PhoneNumber from './InputGeneralInformationComponents/PhoneNumber';
-import SubmitButton from './InputGeneralInformationComponents/SubmitButton';
 import { CvContext } from '../context/CvContext';
 
 
@@ -24,10 +23,10 @@ function InputGeneralInformation() {
     region: ''
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  useEffect(() => {
     setCv(
       {
+        ...cv,
         generalInformation: {
           fullName: fullName,
           dateOfBirth: dateOfBirth,
@@ -36,18 +35,15 @@ function InputGeneralInformation() {
           location: location
         }
       });
-    }
+  }, [fullName, dateOfBirth, email, phoneNumber, location])
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <FullName setFullName = {setFullName}/>  
-        <Email setEmail = {setEmail}/>
-        <DateOfBirth setDateOfBirth = {setDateOfBirth}/>
-        <PhoneNumber setPhoneNumber = {setPhoneNumber}/>
-        <Location setLocation = {setLocation}/>
-        <SubmitButton />
-      </form>   
+      <FullName setFullName = {setFullName}/>  
+      <Email setEmail = {setEmail}/>
+      <DateOfBirth setDateOfBirth = {setDateOfBirth}/>
+      <PhoneNumber setPhoneNumber = {setPhoneNumber}/>
+      <Location setLocation = {setLocation}/>
     </div>
   )
 }

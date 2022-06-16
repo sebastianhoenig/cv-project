@@ -15,7 +15,7 @@ function OutputGeneralInformation() {
       {cv.generalInformation.location.city}  <br />
       {cv.generalInformation.location.country} <br />
       {cv.generalInformation.location.postalCode} <br />
-      {cv.generalInformation.location.region}
+      {cv.generalInformation.location.region} <br />
     </div>
   )
 }
