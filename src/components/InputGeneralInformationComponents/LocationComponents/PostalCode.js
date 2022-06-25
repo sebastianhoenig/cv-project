@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import '../../../components-css/InputGeneralInformation.css';
 
 function PostalCode( {setPostalCode} ) {
   return (
-    <div>
+    <div className="input-div-postal">
       <input 
-        placeholder="Postal code"
+        className="input-field"
+        placeholder="ZIP"
         type="text" 
         name="postalCodeInput" 
         id="postalCodeInput" 

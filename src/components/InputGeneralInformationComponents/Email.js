@@ -2,8 +2,9 @@ import React from 'react'
 
 function Email( {setEmail} ) {
   return (
-    <div>
+    <div className="input-div">
       <input 
+        className="input-field"
         placeholder="Email Adress"
         type="email" 
         name="emailInput" 

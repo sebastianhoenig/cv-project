@@ -2,8 +2,9 @@ import React from 'react'
 
 function FullName({ setFullName }) {
   return (
-    <div>
+    <div className="input-div ">
       <input 
+        className="input-field " 
         placeholder="Full name"
         type="text" 
         name="fullNameInput" 

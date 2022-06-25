@@ -1,9 +1,12 @@
 import React from 'react'
+import '../../components-css/InputGeneralInformation.css'
+
 
 function DateOfBirth( {setDateOfBirth} ) {
   return (
-    <div>
+    <div className="input-div ">
       <input 
+        className="input-field " 
         placeholder="Date of Birth"
         type="text" 
         name="dateInput" 

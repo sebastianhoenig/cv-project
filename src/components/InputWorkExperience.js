@@ -2,10 +2,13 @@ import React, { useState, useContext, useEffect } from 'react'
 import ExperienceItem from './InputWorkExperienceComponents/ExperienceItem';
 import { CvContext } from '../context/CvContext';
 import { v4 as uuidv4 } from 'uuid';
+import WorkExperienceModal from './WorkExperienceModal';
 
 function InputWorkExperience() {
 
   const [cv, setCv] = useContext(CvContext);
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   const [workExperience, setWorkExperience] = useState([
     {
@@ -60,6 +63,8 @@ function InputWorkExperience() {
         return <ExperienceItem key={element.id} id={element.id} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} onDelete={onDelete} />
       })}
       <button onClick={addExperienceItem}>Add</button>
+      <button onClick={() => setModalOpen(true)}>Open Modal</button>
+      {modalOpen && <WorkExperienceModal setModalOpen={setModalOpen}/>}
     </div>
   )
 }

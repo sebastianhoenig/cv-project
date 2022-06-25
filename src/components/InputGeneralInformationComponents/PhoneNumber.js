@@ -2,8 +2,9 @@ import React from 'react'
 
 function PhoneNumber( {setPhoneNumber} ) {
   return (
-    <div>
+    <div className="input-div">
       <input 
+        className="input-field"
         placeholder="Phone number"
         type="text" 
         name="phoneNumberInput" 

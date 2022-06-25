@@ -5,6 +5,7 @@ import DateOfBirth from './InputGeneralInformationComponents/DateOfBirth';
 import Location from './InputGeneralInformationComponents/Location';
 import PhoneNumber from './InputGeneralInformationComponents/PhoneNumber';
 import { CvContext } from '../context/CvContext';
+import '../components-css/InputGeneralInformation.css'
 
 
 function InputGeneralInformation() {
@@ -38,12 +39,21 @@ function InputGeneralInformation() {
   }, [fullName, dateOfBirth, email, phoneNumber, location])
 
   return (
-    <div>
-      <FullName setFullName = {setFullName}/>  
-      <Email setEmail = {setEmail}/>
-      <DateOfBirth setDateOfBirth = {setDateOfBirth}/>
-      <PhoneNumber setPhoneNumber = {setPhoneNumber}/>
-      <Location setLocation = {setLocation}/>
+    <div className="inputGeneralInformation">
+      <h4>Personal Information</h4>
+      <div className="generalInputFields">
+        <div className="personal">
+          <FullName setFullName = {setFullName}/> 
+          <DateOfBirth setDateOfBirth = {setDateOfBirth}/> 
+        </div>
+        <div className="contact">
+          <Email setEmail = {setEmail}/>
+          <PhoneNumber setPhoneNumber = {setPhoneNumber}/>
+        </div>
+        <div>
+          <Location setLocation = {setLocation}/>
+        </div>
+      </div>
     </div>
   )
 }

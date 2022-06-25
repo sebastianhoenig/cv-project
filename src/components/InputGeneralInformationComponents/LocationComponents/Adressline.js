@@ -1,10 +1,12 @@
 import React from 'react';
+import '../../../components-css/InputGeneralInformation.css';
 
 function Adressline( {setAdressline} ) {
 
   return (
-    <div>
+    <div className="input-div">
       <input 
+        className="input-field"
         placeholder="Adressline"
         type="text" 
         name="adressInput" 

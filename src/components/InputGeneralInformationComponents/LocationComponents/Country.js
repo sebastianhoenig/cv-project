@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import '../../../components-css/InputGeneralInformation.css';
 
 function Country( {setCountry} ) {
   return (
-    <div>
+    <div className="input-div-last">
       <input 
+        className="input-field"
         placeholder="Country"
         type="text" 
         name="countryInput" 
