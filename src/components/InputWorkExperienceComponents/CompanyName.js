@@ -3,8 +3,8 @@ import React from 'react'
 function CompanyName( {setCompanyName} ) {
   return (
     <div>
-      <label htmlFor="companyNameInput">Enter Company Name</label>
       <input 
+        placeholder="Company"
         type="text" 
         name="companyNameInput" 
         id="companyNameInput" 

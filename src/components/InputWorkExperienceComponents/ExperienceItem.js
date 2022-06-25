@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import CompanyName from './CompanyName';
 import Position from './Position';
-import StartDate from './StartDate';
-import EndDate from './EndDate'
-import Summary from './Summary';
+import StartDate from '../Utils/StartDate';
+import EndDate from '../Utils/EndDate'
+import Summary from '../Utils/Summary';
+import DeleteButton from '../Utils/DeleteButton'
 
-function ExperienceItem( {id, workExperience, setWorkExperience} ) {
+function ExperienceItem( {id, workExperience, setWorkExperience, onDelete} ) {
 
   const [companyName, setCompanyName] = useState('');
   const [position, setPosition] = useState('');
@@ -15,7 +16,8 @@ function ExperienceItem( {id, workExperience, setWorkExperience} ) {
 
   useEffect(() => {
     let updateWorkExperience = [...workExperience];
-    if (!(id in workExperience.map((e) => e.id))) {
+    let all_id = workExperience.map((e) => e.id)
+    if (!(all_id.includes(id))) {
       updateWorkExperience = [...workExperience, 
       {
         companyName: '',
@@ -43,6 +45,7 @@ function ExperienceItem( {id, workExperience, setWorkExperience} ) {
       <StartDate setStartDate = {setStartDate}/>
       <EndDate setEndDate = {setEndDate}/>
       <Summary setSummary = {setSummary}/>
+      <DeleteButton id={id} onDelete={onDelete} />
     </div>
   )
 }

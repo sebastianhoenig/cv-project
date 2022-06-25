@@ -18,19 +18,9 @@ export const CvProvider = (props) => {
           region: 'Hesse'
         }
       },
-      workExperience: [{
-        companyName: 'Apple Computer',
-        position: 'Software Engineer, Intern',
-        startDate: '01.08.2021',
-        endDate: '31.10.2021',
-        summary: 
-        [
-          "Reduced time to render the user's buddy list by 75% by implementing prediction algorithm",
-          'Implemented iChat integration with OSX Spotlight Search by creating tool which extracts metadata from saved data transcripts and provides metadata to a system-wide search database',
-          'Redesigned chat file format and implemented backwards compatibility for search'
-        ]
-      }]
-
+      workExperience: [],
+      education: [],
+      project: []
     }
   );
   return (
@@ -39,3 +29,17 @@ export const CvProvider = (props) => {
     </CvContext.Provider>
   )
 }
+
+/*{
+  companyName: 'Apple Computer',
+  position: 'Software Engineer, Intern',
+  startDate: '01.08.2021',
+  endDate: '31.10.2021',
+  summary: 
+  [
+    "Reduced time to render the user's buddy list by 75% by implementing prediction algorithm",
+    'Implemented iChat integration with OSX Spotlight Search by creating tool which extracts metadata from saved data transcripts and provides metadata to a system-wide search database',
+    'Redesigned chat file format and implemented backwards compatibility for search'
+  ],
+  id: uuidv4()
+}*/

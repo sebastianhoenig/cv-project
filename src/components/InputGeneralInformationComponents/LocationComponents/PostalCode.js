@@ -3,8 +3,8 @@ import React from 'react'
 function PostalCode( {setPostalCode} ) {
   return (
     <div>
-      <label htmlFor="postalCodeInput">Postal Code </label>
       <input 
+        placeholder="Postal code"
         type="text" 
         name="postalCodeInput" 
         id="postalCodeInput" 

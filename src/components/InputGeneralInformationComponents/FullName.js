@@ -3,8 +3,8 @@ import React from 'react'
 function FullName({ setFullName }) {
   return (
     <div>
-      <label htmlFor="fullNameInput">Enter full name</label>
       <input 
+        placeholder="Full name"
         type="text" 
         name="fullNameInput" 
         id="fullNameInput" 

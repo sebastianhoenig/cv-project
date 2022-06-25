@@ -3,8 +3,8 @@ import React from 'react'
 function Summary( {setSummary} ) {
   return (
     <div>
-      <label htmlFor="summaryInput">Enter Summary</label>
       <input 
+        placeholder="Summary"
         type="text" 
         name="summaryInput" 
         id="summaryInput" 

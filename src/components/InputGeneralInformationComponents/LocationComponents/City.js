@@ -3,8 +3,8 @@ import React from 'react'
 function City( {setCity} ) {
   return (
     <div>
-      <label htmlFor="cityInput">City </label>
       <input 
+        placeholder="City"
         type="text" 
         name="cityInput" 
         id="cityInput" 

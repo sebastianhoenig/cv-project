@@ -1,0 +1,15 @@
+.outputGeneralInformation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fullName {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.side {
+  font-size: small;
+}

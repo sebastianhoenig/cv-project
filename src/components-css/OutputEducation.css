@@ -1,0 +1,16 @@
+.outputEducationStart {
+  margin-top: 20px;
+}
+
+.outputEducation {
+  display: flex;
+  flex-direction: column;
+}
+
+.educationHeadline h4 {
+  margin: 0px;
+}
+
+.educationHeadline hr {
+  margin: 2px;
+}

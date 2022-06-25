@@ -1,0 +1,16 @@
+.outputExperienceStart {
+  margin-top: 20px;
+}
+
+.outputWorkExperience {
+  display: flex;
+  flex-direction: column;
+}
+
+.experienceHeadline h4 {
+  margin: 0px;
+}
+
+.experienceHeadline hr {
+  margin: 2px;
+}

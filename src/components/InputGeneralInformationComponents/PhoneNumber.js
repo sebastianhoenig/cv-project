@@ -3,8 +3,8 @@ import React from 'react'
 function PhoneNumber( {setPhoneNumber} ) {
   return (
     <div>
-      <label htmlFor="phoneNumberInput">Enter phone number</label>
       <input 
+        placeholder="Phone number"
         type="text" 
         name="phoneNumberInput" 
         id="phoneNumberInput"

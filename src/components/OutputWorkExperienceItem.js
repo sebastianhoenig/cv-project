@@ -1,15 +1,36 @@
 import React from 'react'
+import '../components-css/OutputWorkExperienceItem.css'
+
 
 function OutputWorkExperienceItem( {content} ) {
+
+  const transformedSummary = content.summary.map((el)=>{
+    return <li>{el}</li>;
+  });
+
   return (
-    <div>
-      {content.companyName} <br />
-      {content.position} <br />
-      {content.startDate} <br />
-      {content.endDate} <br />
-      {content.summary} <br />
+    <div className="item">
+      <div className="headline-job">
+        <div className="position">
+          {content.position}
+        </div>
+        <div className="companyName">
+          {content.companyName}
+        </div>
+        <div className="timerange">
+          {content.startDate} - {content.endDate} 
+        </div>
+      </div>
+      <ul>
+        {transformedSummary}
+      </ul>
     </div>
   )
 }
 
 export default OutputWorkExperienceItem
+
+/**
+ *    {workExperience.map((element, idx) => {
+          return <OutputWorkExperienceItem key={idx} content={element}/>
+ */

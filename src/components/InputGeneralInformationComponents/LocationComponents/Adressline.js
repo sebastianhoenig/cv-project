@@ -1,13 +1,11 @@
-import React, { useContext } from 'react';
-import { CvContext } from '../../../context/CvContext';
+import React from 'react';
 
 function Adressline( {setAdressline} ) {
-  const cv = useContext(CvContext);
 
   return (
     <div>
-      <label htmlFor="adressInput">Adress </label>
       <input 
+        placeholder="Adressline"
         type="text" 
         name="adressInput" 
         id="adressInput"

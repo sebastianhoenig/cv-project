@@ -3,8 +3,8 @@ import React from 'react'
 function Email( {setEmail} ) {
   return (
     <div>
-      <label htmlFor="emailInput">Enter mail</label>
       <input 
+        placeholder="Email Adress"
         type="email" 
         name="emailInput" 
         id="emailInput" 

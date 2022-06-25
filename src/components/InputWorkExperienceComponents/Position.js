@@ -3,8 +3,8 @@ import React from 'react'
 function Position( {setPosition} ) {
   return (
     <div>
-      <label htmlFor="positionInput">Enter Position</label>
       <input 
+        placeholder="Position"
         type="text" 
         name="positionInput" 
         id="positionInput" 

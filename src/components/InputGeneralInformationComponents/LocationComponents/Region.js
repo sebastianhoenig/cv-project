@@ -3,8 +3,8 @@ import React from 'react'
 function Region( {setRegion} ) {
   return (
     <div>
-      <label htmlFor="regionInput">Region </label>
       <input 
+        placeholder="Region"
         type="text" 
         name="regionInput" 
         id="regionInput"

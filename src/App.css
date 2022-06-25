@@ -5,12 +5,13 @@
 
 .leftSide {
   outline: 2px solid blue;
-  flex: 50%;
+  flex: 33%;
   height: 100vh;
 }
 
 .rightSide {
   outline: 2px solid green;
-  flex: 50%;
+  flex: 67%;
   height: 100vh;
+  padding: 40px;
 }

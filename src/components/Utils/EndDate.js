@@ -3,11 +3,13 @@ import React from 'react'
 function EndDate( {setEndDate} ) {
   return (
     <div>
-      <label htmlFor="endDateInput">Enter End Date</label>
       <input 
+        placeholder="End date"
         type="text" 
         name="endDateInput" 
         id="endDateInput" 
+        onFocus={(e) => e.target.type="date"}
+        onBlur={(e) => e.target.type="text"}
         onChange={(e) => setEndDate(e.target.value)}/>
     </div>
   )
