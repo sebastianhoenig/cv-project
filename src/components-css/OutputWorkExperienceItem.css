@@ -6,10 +6,26 @@
 .headline-job {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   font-weight: 500;
 }
 
 ul {
   padding-left: 15px;
+}
+
+.position {
+  text-align: left;
+  width: 30%;
+}
+
+.companyName {
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 30%;
+  text-align: center;
+}
+
+.timerange {
+  width: 30%;
+  text-align: right;
 }

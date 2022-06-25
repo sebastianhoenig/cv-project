@@ -1,25 +1,26 @@
-.item {
+.outputProjectStart {
+  margin-top: 20px;
+}
+
+.outputProject {
   display: flex;
   flex-direction: column;
 }
 
-.headline-education {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-weight: 500;
+.projectHeadline h4 {
+  margin: 0px;
 }
 
-ul {
-  padding-left: 15px;
+.projectHeadline hr {
+  margin: 2px;
 }
 
-.degree {
+.name {
   text-align: left;
   width: 30%;
 }
 
-.institution {
+.linkDiv {
   margin-left: 5%;
   margin-right: 5%;
   width: 30%;
