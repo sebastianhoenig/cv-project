@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import '../../components-css/Modal.css'
 
 function StartDate( {setStartDate} ) {
   return (
-    <div>
+    <div className="modal-input-div">
       <input 
+        className="modal-input-field"
         placeholder="Start date"
         type="text" 
         name="startDateInput" 

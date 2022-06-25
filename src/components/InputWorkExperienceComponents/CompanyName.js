@@ -2,8 +2,9 @@ import React from 'react'
 
 function CompanyName( {setCompanyName} ) {
   return (
-    <div>
+    <div className="modal-input-div">
       <input 
+        className="modal-input-field"
         placeholder="Company"
         type="text" 
         name="companyNameInput" 

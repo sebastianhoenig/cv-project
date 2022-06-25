@@ -58,13 +58,14 @@ function InputWorkExperience() {
 
 
   return (
-    <div>
+    <div className="inputWorkExperience">
+      <h4>Work Experience</h4>
       {cv.workExperience.map((element) => {
         return <ExperienceItem key={element.id} id={element.id} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} onDelete={onDelete} />
       })}
       <button onClick={addExperienceItem}>Add</button>
       <button onClick={() => setModalOpen(true)}>Open Modal</button>
-      {modalOpen && <WorkExperienceModal setModalOpen={setModalOpen}/>}
+      {modalOpen && <WorkExperienceModal setModalOpen={setModalOpen} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} onDelete={onDelete} id={uuidv4()}/>}
     </div>
   )
 }

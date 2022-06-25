@@ -2,8 +2,9 @@ import React from 'react'
 
 function Position( {setPosition} ) {
   return (
-    <div>
-      <input 
+    <div className="modal-input-div">
+    <input 
+        className="modal-input-field"
         placeholder="Position"
         type="text" 
         name="positionInput" 

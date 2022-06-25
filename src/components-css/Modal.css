@@ -1,0 +1,151 @@
+.modalBackground {
+
+}
+
+.modalContainer {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 30%;
+  height: 250px;
+  border-radius: 12px;
+  background-color: rgb(53, 53, 63);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-input {
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.company-information {
+  display: flex;
+}
+
+.modal-company-information {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.modal-timerange {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-x {
+  font: inherit;
+  height: fit-content;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font-size: x-large;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.modal-x:hover {
+  color: rgba(255, 255, 255, 0.726);
+}
+
+.modal-summary {
+  width: 100%;
+  display: flex;
+}
+
+[contenteditable]:focus {
+  outline: 0px solid transparent;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  pointer-events: none;
+  display: block; /* For Firefox */
+}
+
+.modal-summary {
+  width: 100%;
+}
+
+.summaryInput {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.699);
+  border: 0;
+  outline: rgb(209, 206, 206);
+  border: 0.5px solid rgb(31, 29, 29);
+  background-color: rgba(0, 0, 0, 0.075);
+  margin-bottom: 10px;
+  height: 100px;
+  font-size: small;
+}
+
+.summaryInput:hover{
+  border: 0.5px solid rgba(255, 255, 255, 0.801);
+  box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.1);
+}
+
+.summaryInput:focus {
+  border: 0.5px solid white;
+}
+
+.modal-input-div {
+  width: 40%;
+  filter: brightness(150%);
+}
+
+.modal-input-field {
+  width: 100%;
+  color: white;
+  border: 0;
+  outline: rgb(209, 206, 206);
+  border: 0.5px solid rgb(31, 29, 29);
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.modal-input-field:focus {
+  border: 0.5px solid white;
+}
+
+.modal-input-field:hover{
+  border: 0.5px solid rgba(255, 255, 255, 0.801);
+  box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, 0.1);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.modal-button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(84, 105, 212);
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 4px 8px;
+  display: inline-block;
+  min-height: 28px;
+}
+
+.modal-button:hover {
+  color: rgba(255, 255, 255, 0.753);
+}

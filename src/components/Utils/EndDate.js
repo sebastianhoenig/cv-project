@@ -1,9 +1,11 @@
 import React from 'react'
+import '../../components-css/Modal.css';
 
 function EndDate( {setEndDate} ) {
   return (
-    <div>
+    <div className="modal-input-div">
       <input 
+        className="modal-input-field"
         placeholder="End date"
         type="text" 
         name="endDateInput" 
