@@ -45,7 +45,7 @@ function WorkExperienceModal( {setModalOpen, workExperience, setWorkExperience, 
   }
 
   return (
-    <div className="modalBackground">
+    <div className="modalBackground" onClick={() => setModalOpen(false)}>
       <div className="modalContainer">
         <div className="modal-title">
           <h4>Add Work Experience</h4>
@@ -65,8 +65,8 @@ function WorkExperienceModal( {setModalOpen, workExperience, setWorkExperience, 
           </div>
         </div>
         <div className="footer">
-          <button className="modal-button" onClick={() => setModalOpen(false)}>Cancel</button>
           <button className="modal-button" onClick={() => addExperience()}>Add</button>
+          <button className="modal-button" onClick={() => setModalOpen(false)}>Cancel</button>
         </div>
       </div>
       

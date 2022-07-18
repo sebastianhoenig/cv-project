@@ -49,12 +49,14 @@ function EditModal( {setEditModal, element, onEdit, id, workExperience, setWorkE
   }
 
   return (
-    <div className="modalBackground">
+    <div className="modalBackground" onClick={() => setEditModal(false)}>
       <div className="modalContainer">
         <div className="modal-title">
-          <h4>Edit Work Experience</h4>
+          <h3>Edit Work Experience</h3>
           <button className="modal-x" onClick={() => setEditModal(false)}>&times;</button>
         </div>
+        <br />
+        <br />
         <div className="experience-input">
           <div className="modal-company-information">
             <CompanyName setCompanyName = {setCompanyName} companyName={companyName}/>  
@@ -69,8 +71,8 @@ function EditModal( {setEditModal, element, onEdit, id, workExperience, setWorkE
           </div>
         </div>
         <div className="footer">
+          <button className="modal-button" onClick={() => addExperience()}>Edit</button>
           <button className="modal-button" onClick={() => setEditModal(false)}>Cancel</button>
-          <button className="modal-button" onClick={() => addExperience()}>Add</button>
         </div>
       </div>
       

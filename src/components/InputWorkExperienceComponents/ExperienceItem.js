@@ -21,7 +21,9 @@ function ExperienceItem( {id, element, setModalOpen, onDelete, onEdit, workExper
           <FontAwesomeIcon onClick={() => onDelete(element.id)} className="x-button" icon={faX}></FontAwesomeIcon>
         </div>
       </div>
-      {editModal && <EditModal setEditModal={setEditModal} element={element} onEdit={onEdit} id={id} workExperience={workExperience} setWorkExperience={setWorkExperience}/>}
+      {editModal && <div className="overlay" onClick={() => setEditModal(false)}>
+        <EditModal setEditModal={setEditModal} element={element} onEdit={onEdit} id={id} workExperience={workExperience} setWorkExperience={setWorkExperience}/>
+      </div>}
     </div>
   )
 }

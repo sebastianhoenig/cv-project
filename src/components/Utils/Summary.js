@@ -29,15 +29,3 @@ function Summary( {setSummary, summary} ) {
 }
 
 export default Summary
-
-/**
- *       <textarea 
-        className="summaryInput"
-        name="summaryInput" 
-        id="summaryInput" 
-        cols="63" 
-        rows="6"
-        placeholder="Enter summary"
-        onChange={(e) => setSummary(e.target.value)}>
-        </textarea>
- */

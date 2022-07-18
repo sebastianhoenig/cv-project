@@ -40,7 +40,9 @@ function InputWorkExperience() {
         })}
       </div>
       <button className="modalButton" onClick={() => setModalOpen(true)}>Add Experience</button>
-      {modalOpen && <WorkExperienceModal setModalOpen={setModalOpen} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} id={uuidv4()}/>}
+      {modalOpen && <div className="overlay" onClick={() => setModalOpen(false)}>
+        <WorkExperienceModal setModalOpen={setModalOpen} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} id={uuidv4()}/>
+      </div>}
     </div>
   )
 }

@@ -149,3 +149,13 @@
 .modal-button:hover {
   color: rgba(255, 255, 255, 0.753);
 }
+
+.overlay {
+  position: fixed; /* Positioning and size */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128,128,128,0.5); /* color */
+  /* making it hidden by default */
+}
