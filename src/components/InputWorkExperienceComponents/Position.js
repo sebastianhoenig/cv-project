@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Position( {setPosition} ) {
+function Position( {setPosition, position} ) {
   return (
     <div className="modal-input-div">
     <input 
@@ -9,6 +9,7 @@ function Position( {setPosition} ) {
         type="text" 
         name="positionInput" 
         id="positionInput" 
+        value={position}
         onChange={(e) => setPosition(e.target.value)}/>
     </div>
   )

@@ -56,7 +56,7 @@ function OutputWorkExperience() {
         <hr />
       </div>
       <div className="outputWorkExperience"> 
-        {workExperience.map((element, idx) => {
+        {cv.workExperience.map((element, idx) => {
           return <OutputWorkExperienceItem key={idx} content={element}/>
         })}
       </div>

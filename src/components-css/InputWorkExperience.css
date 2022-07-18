@@ -1,0 +1,31 @@
+.inputWorkExperience {
+  padding: 10px;
+  color: white;
+}
+
+.inputWorkExperienceList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modalButton {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(84, 105, 212);
+  box-shadow: rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 12%) 0px 1px 1px 0px, rgb(84 105 212) 0px 0px 0px 1px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(0 0 0 / 0%) 0px 0px 0px 0px, rgb(60 66 87 / 8%) 0px 2px 5px 0px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px 4px;
+  display: inline-block;
+  margin-top: 2%;
+  margin-left: 4.5%;
+}
+
+.modalButton:hover {
+  color: rgba(255, 255, 255, 0.753);
+}

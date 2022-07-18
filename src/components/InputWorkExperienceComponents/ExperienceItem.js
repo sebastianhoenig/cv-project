@@ -1,53 +1,38 @@
 import React, { useEffect, useState } from 'react'
-import CompanyName from './CompanyName';
-import Position from './Position';
-import StartDate from '../Utils/StartDate';
-import EndDate from '../Utils/EndDate'
-import Summary from '../Utils/Summary';
-import DeleteButton from '../Utils/DeleteButton'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare, faX } from '@fortawesome/free-solid-svg-icons';
+import '../../components-css/ExperienceItem.css';
+import EditModal from '../EditModal';
 
-function ExperienceItem( {id, workExperience, setWorkExperience, onDelete} ) {
+function ExperienceItem( {id, element, setModalOpen, onDelete, onEdit, workExperience, setWorkExperience} ) {
 
-  const [companyName, setCompanyName] = useState('');
-  const [position, setPosition] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [summary, setSummary] = useState('');
-
-  useEffect(() => {
-    let updateWorkExperience = [...workExperience];
-    let all_id = workExperience.map((e) => e.id)
-    if (!(all_id.includes(id))) {
-      updateWorkExperience = [...workExperience, 
-      {
-        companyName: '',
-        position: '',
-        startDate: '',
-        endDate: '',
-        summary: '',
-        id: id
-      }]
-    }
-    let modified = updateWorkExperience.map(
-      el => el.id === id? {...el, companyName:companyName, position:position,
-      startDate:startDate, endDate:endDate, summary:summary} : el
-    )
-    setWorkExperience(
-      modified
-    )
-  }, [companyName, position, startDate, endDate, summary])
-
+  const [editModal, setEditModal] =  useState(false);
 
   return (
-    <div>
-      <CompanyName setCompanyName = {setCompanyName}/>  
-      <Position setPosition = {setPosition}/>
-      <StartDate setStartDate = {setStartDate}/>
-      <EndDate setEndDate = {setEndDate}/>
-      <Summary setSummary = {setSummary}/>
-      <DeleteButton id={id} onDelete={onDelete} />
+    <div className="experience-item">
+      <div className="name">
+        {element.companyName}
+      </div>
+      <div className="edit-buttons">
+        <div>
+          <FontAwesomeIcon onClick={() => setEditModal(true)} className="edit-button" icon={faPenToSquare}></FontAwesomeIcon>
+        </div>
+        <div>
+          <FontAwesomeIcon onClick={() => onDelete(element.id)} className="x-button" icon={faX}></FontAwesomeIcon>
+        </div>
+      </div>
+      {editModal && <EditModal setEditModal={setEditModal} element={element} onEdit={onEdit} id={id} workExperience={workExperience} setWorkExperience={setWorkExperience}/>}
     </div>
   )
 }
 
 export default ExperienceItem
+
+/**
+ * <CompanyName setCompanyName = {setCompanyName}/>  
+      <Position setPosition = {setPosition}/>
+      <StartDate setStartDate = {setStartDate}/>
+      <EndDate setEndDate = {setEndDate}/>
+      <Summary setSummary = {setSummary}/>
+      <DeleteButton id={id} onDelete={onDelete} />
+ */

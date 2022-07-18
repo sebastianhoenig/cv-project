@@ -3,6 +3,7 @@ import ExperienceItem from './InputWorkExperienceComponents/ExperienceItem';
 import { CvContext } from '../context/CvContext';
 import { v4 as uuidv4 } from 'uuid';
 import WorkExperienceModal from './WorkExperienceModal';
+import '../components-css/InputWorkExperience.css'
 
 function InputWorkExperience() {
 
@@ -10,16 +11,7 @@ function InputWorkExperience() {
 
   const [modalOpen, setModalOpen] = useState(false);
 
-  const [workExperience, setWorkExperience] = useState([
-    {
-      companyName: '',
-      position: '',
-      startDate: '',
-      endDate: '',
-      summary: '',
-      id: uuidv4()
-    },
-  ]);
+  const [workExperience, setWorkExperience] = useState([]);
 
   useEffect(() => {
     setCv((prevState) => ({
@@ -28,44 +20,27 @@ function InputWorkExperience() {
     }))
   }, [workExperience])
 
-  const onDelete = (e, id) => {
-    e.preventDefault();
+  const onDelete = (id) => {
     let modifiedWorkExperience = workExperience.filter(el => el.id !== id);
     setCv((prevState) => ({
       ...prevState,
       workExperience: modifiedWorkExperience
     }))
+    setWorkExperience(modifiedWorkExperience);
   }
-
-  function addExperienceItem() {
-    setCv((prevState) => ({
-        ...prevState,
-        workExperience: [
-          ...prevState.workExperience,
-          {
-            companyName: '',
-            position: '',
-            startDate: '',
-            endDate: '',
-            summary: '',
-            id: uuidv4()
-          },
-        ]
-
-    }))
-  }
-
-
 
   return (
     <div className="inputWorkExperience">
       <h4>Work Experience</h4>
-      {cv.workExperience.map((element) => {
-        return <ExperienceItem key={element.id} id={element.id} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} onDelete={onDelete} />
-      })}
-      <button onClick={addExperienceItem}>Add</button>
-      <button onClick={() => setModalOpen(true)}>Open Modal</button>
-      {modalOpen && <WorkExperienceModal setModalOpen={setModalOpen} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} onDelete={onDelete} id={uuidv4()}/>}
+      <div className="inputWorkExperienceList">
+        {workExperience.map((element) => {
+          console.log(element);
+          return <ExperienceItem key={element.id} id={element.id} element={element} setModalOpen={setModalOpen} onDelete={onDelete}
+          workExperience={cv.workExperience} setWorkExperience={setWorkExperience}/>
+        })}
+      </div>
+      <button className="modalButton" onClick={() => setModalOpen(true)}>Add Experience</button>
+      {modalOpen && <WorkExperienceModal setModalOpen={setModalOpen} workExperience={cv.workExperience} setWorkExperience={setWorkExperience} id={uuidv4()}/>}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 
-function CompanyName( {setCompanyName} ) {
+function CompanyName( {setCompanyName, companyName} ) {
+  console.log(companyName);
   return (
     <div className="modal-input-div">
       <input 
@@ -9,6 +10,7 @@ function CompanyName( {setCompanyName} ) {
         type="text" 
         name="companyNameInput" 
         id="companyNameInput" 
+        value={companyName}
         onChange={(e) => {
           setCompanyName(e.target.value)}}/>
     </div>

@@ -6,17 +6,21 @@ import EndDate from './Utils/EndDate';
 import StartDate from './Utils/StartDate';
 import Summary from './Utils/Summary';
 
-function WorkExperienceModal( {setModalOpen, workExperience, setWorkExperience, id} ) {
+function EditModal( {setEditModal, element, onEdit, id, workExperience, setWorkExperience} ) {
 
-  const [companyName, setCompanyName] = useState('');
-  const [position, setPosition] = useState('');
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
-  const [summary, setSummary] = useState([]);
+
+  const [companyName, setCompanyName] = useState(element.companyName);
+  const [position, setPosition] = useState(element.position);
+  const [startDate, setStartDate] = useState(element.startDate);
+  const [endDate, setEndDate] = useState(element.endDate);
+  const [summary, setSummary] = useState(element.summary);
 
   const updateSummary = (updatedSummary) => {
+    console.log(summary);
+    console.log(updatedSummary);
     let newString = updatedSummary.split("\n");
     let modified = newString.filter((el) => el);
+    console.log(modified);
     setSummary(modified);
   }
 
@@ -41,31 +45,31 @@ function WorkExperienceModal( {setModalOpen, workExperience, setWorkExperience, 
     setWorkExperience(
       modified
     );
-    setModalOpen(false);
+    setEditModal(false);
   }
 
   return (
     <div className="modalBackground">
       <div className="modalContainer">
         <div className="modal-title">
-          <h4>Add Work Experience</h4>
-          <button className="modal-x" onClick={() => setModalOpen(false)}>&times;</button>
+          <h4>Edit Work Experience</h4>
+          <button className="modal-x" onClick={() => setEditModal(false)}>&times;</button>
         </div>
         <div className="experience-input">
           <div className="modal-company-information">
-            <CompanyName setCompanyName = {setCompanyName}/>  
-            <Position setPosition = {setPosition}/>
+            <CompanyName setCompanyName = {setCompanyName} companyName={companyName}/>  
+            <Position setPosition = {setPosition} position={position}/>
           </div>
           <div className="modal-timerange">
-            <StartDate setStartDate = {setStartDate}/>
-            <EndDate setEndDate = {setEndDate}/>
+            <StartDate setStartDate = {setStartDate} startDate={startDate}/>
+            <EndDate setEndDate = {setEndDate} endDate={endDate}/>
           </div>
           <div className="modal-summary">
-            <Summary setSummary = {updateSummary}/>
+            <Summary setSummary = {updateSummary} summary={summary}/>
           </div>
         </div>
         <div className="footer">
-          <button className="modal-button" onClick={() => setModalOpen(false)}>Cancel</button>
+          <button className="modal-button" onClick={() => setEditModal(false)}>Cancel</button>
           <button className="modal-button" onClick={() => addExperience()}>Add</button>
         </div>
       </div>
@@ -74,4 +78,4 @@ function WorkExperienceModal( {setModalOpen, workExperience, setWorkExperience, 
   )
 }
 
-export default WorkExperienceModal
+export default EditModal

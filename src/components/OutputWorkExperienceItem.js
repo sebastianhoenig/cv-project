@@ -8,6 +8,16 @@ function OutputWorkExperienceItem( {content} ) {
     return <li>{el}</li>;
   });
 
+  const transformedDate = (inputDate) => {
+    let date = new Date(inputDate);
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    if (month < 10) {
+      month = '0' + month;
+    }
+    return month + '/' + year
+  } 
+
   return (
     <div className="item">
       <div className="headline-job">
@@ -18,7 +28,7 @@ function OutputWorkExperienceItem( {content} ) {
           {content.companyName}
         </div>
         <div className="timerange">
-          {content.startDate} - {content.endDate} 
+          {transformedDate(content.startDate)} - {transformedDate(content.endDate)} 
         </div>
       </div>
       <ul>

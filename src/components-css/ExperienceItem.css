@@ -1,0 +1,31 @@
+.experience-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 100%;
+  color: white;
+  border: 0;
+  outline: rgb(209, 206, 206);
+  border: 0.5px solid rgb(31, 29, 29);
+  font-size: small;
+  width: 87%;
+}
+
+.edit-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 10%;
+  justify-content: space-between;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+}
+
+.x-button:hover {
+  cursor: pointer;
+}
